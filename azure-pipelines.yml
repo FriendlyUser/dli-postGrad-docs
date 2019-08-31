@@ -26,14 +26,12 @@ steps:
   displayName: 'Get the deploy key'
 
 - script: |
-    mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
-    chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+    cd docs
     git init
     git config --local user.name "Azure Pipelines"
     git config --local user.email "azuredevops@microsoft.com"
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
-    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     git remote add origin git@github.com:$(githubRepo).git
     git push origin HEAD:refs/heads/gh-pages --force
   displayName: 'Publish GitHub Pages'
