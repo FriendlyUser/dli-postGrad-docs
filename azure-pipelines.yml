@@ -21,17 +21,17 @@ steps:
 
 - script: |
     npm install
-    npx saber build
+    npx vuepress build dist
   displayName: 'Build and commit pages'
 
 - script: |
-    cd docs
+    cd dist
     git init
     git config --local user.name "Azure Pipelines"
     git config --local user.email "azuredevops@microsoft.com"
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
-    git remote add origin git@github.com:$(githubRepo).git
+    git remote add origin https://FriendlyUser:$(GITHUB_TOKEN)github.com:$(githubRepo).git
     git push origin HEAD:refs/heads/gh-pages --force
   displayName: 'Publish GitHub Pages'
   condition: |
