@@ -21,7 +21,7 @@ steps:
 
 - script: |
     npm install
-    npx vuepress build dist
+    npx vuepress build docs
   displayName: 'Build and commit pages'
 
 - script: |
