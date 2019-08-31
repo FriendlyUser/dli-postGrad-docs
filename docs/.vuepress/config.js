@@ -2,7 +2,7 @@
 module.exports = {
   base: '/vuepress-theme-cool-starter/',
   theme: 'cool',
-  //dest: 'dist',
+  dest: 'dist',
   head: [
     ['link', { rel: 'icon', href: '/faviconCustom.ico' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],

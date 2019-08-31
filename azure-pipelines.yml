@@ -25,7 +25,7 @@ steps:
   displayName: 'Build and commit pages'
 
 - script: |
-    cd dist
+    cd docs/.vuepress/dist
     git init
     git config --local user.name "Azure Pipelines"
     git config --local user.email "azuredevops@microsoft.com"
