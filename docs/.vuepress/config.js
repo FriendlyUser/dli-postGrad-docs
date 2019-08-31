@@ -1,6 +1,6 @@
 // .vuepress/config.js
 module.exports = {
-  base: '/vuepress-theme-cool-starter/',
+  base: '/dli-postGrad-docs/',
   theme: 'cool',
   // dest: 'dist',
   head: [
